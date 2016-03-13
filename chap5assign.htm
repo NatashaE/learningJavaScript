@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Chapter 5 Assignment</title>
+<script type="text/javascript">
+	function calc_exchange(dollar, country)
+		{
+			ex_rate = dollar * country;
+			return ex_rate;
+		}
+	function lb()
+	{
+		document.write("<br>");
+	}
+</script>
+</head>
+<body style="background-color:orange">
+	<script type="text/javascript">
+	var dollar_amt = prompt ("Please enter the amount of US dollars to convert");
+	var eur = .92310;
+	var gbp = .70152;
+	var aud = 1.41191;
+	var ars = 13.8800;
+	var thb = 35.6800;
+
+	document.write("$" +dollar_amt+ " in U.S. Currency is approximately equivalent to:");
+	lb();
+	document.write(calc_exchange(dollar_amt, eur).toFixed(2)+ " EUR (Euros)");
+	lb();
+	document.write(calc_exchange(dollar_amt, gbp).toFixed(2)+ " GBP (British Pounds)");
+	lb();
+	document.write(calc_exchange(dollar_amt, aud).toFixed(2)+ " AUD (Australian Dollars)");
+	lb();
+	document.write(calc_exchange(dollar_amt, ars).toFixed(2)+ " ARS (Argentine Pesos)");
+	lb();
+	document.write(calc_exchange(dollar_amt, thb).toFixed(2)+ " THB (Thai Bahts)");
+	</script>
+
+</body>
+</html>

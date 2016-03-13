@@ -1,0 +1,88 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Chapter 6 Assignment 1</title>
+	
+	<script type="text/javascript">
+	function lb()
+	{
+		document.write("<br>");
+	}
+	
+	var exam_one = parseInt(prompt("Please enter the grade of the first exam"));
+	var exam_two = parseInt(prompt("Please enter the grade of the second exam"));
+	var exam_three = parseInt(prompt("Please enter the grade of the third exam"));
+	</script>
+</head>
+
+<body style="background-color: gray">
+	<script type="text/javascript">
+
+	var exam_average = Math.round((exam_one + exam_two + exam_three) / 3);
+	
+	if (exam_average <= 100 && exam_average >= 91)
+	{
+		letter_grade = "A";
+	} 
+	else if (exam_average <= 90 && exam_average >= 81)
+	{
+		letter_grade = "B";
+	}
+	else if (exam_average <= 80 && exam_average >= 71)
+	{
+		letter_grade = "C";
+	}
+	else if (exam_average <= 70 && exam_average >= 65)
+	{
+		letter_grade = "D";
+	}
+	else if (exam_average < 65)
+	{
+		letter_grade = "F";
+	}
+	else 
+	{
+		document.write("Error with input values!!");
+		lb();
+	}
+	
+	document.write("Your 3 exam scores are:");
+	lb();
+	document.write("Exam 1: " + exam_one);
+	lb();
+	document.write("Exam 3: " + exam_two);
+	lb();
+	document.write("Exam 2: " + exam_three);
+	lb();
+	document.write("Average: " + exam_average);
+	lb();
+	document.write("Course grade: " + letter_grade);
+	lb();
+
+	switch (letter_grade)
+	{
+		case "A" :
+			document.write("Great job, keep it up.");
+			break;
+		case "B" :
+			document.write("Very nice work.");
+			break;
+		case "C" :
+			document.write("You can do it, keep studying.");
+			break;
+		case "D" :
+			document.write("You need some help, see the teacher.");
+			break;
+		case "F" :
+			document.write("Please schedule an appointment with your advisor.");
+			break;
+		default :
+			document.write("An error has occurred!!")
+	}
+
+	
+	//document.write("")
+
+	</script>
+</body>
+</html>

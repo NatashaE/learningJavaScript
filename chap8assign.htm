@@ -1,0 +1,75 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Chapter 8 Assignment</title>
+	<script type="text/javascript">
+	function lb()
+	{
+		document.write("<br>");
+	}
+
+	var full_name = prompt("please enter your full name:");
+	var age = prompt("Enter your age:");
+	var gender = prompt("Enter your gender(only M, m, F, or f):");
+
+		
+	</script>
+</head>
+<body style="background-color: violet">
+	<script type="text/javascript">
+	document.write("<h1>Browser Settings:</h1>");
+
+	if(navigator.javaEnabled)
+	{
+		document.write("Java is Enabled!");
+	}
+	else
+	{
+		document.write("Java is Disabled!");
+	}
+
+	lb();
+	
+	document.write("Browser platform: "+navigator.platform+"<br>");
+	document.write("Browser code name: "+navigator.appCodeName+"<br>");
+	document.write("Browser name: "+navigator.appName+"<br>");
+	document.write("Browser version: "+navigator.appVersion+"<br>");
+	
+	lb();
+
+	function Person(full_name, age, gender)
+	{
+		this.full_name = full_name;
+		this.age = age;
+		this.gender = gender;
+		this.life_expect = function ()
+		{
+		if (this.gender=="M" || this.gender=="m")
+			{
+				var life_expectd = 76 - this.age;
+				return life_expectd;
+			}
+			else
+			{
+				var life_expectd = 81 - this.age;
+				return life_expectd;
+			}
+		};
+	}
+	
+	lb();
+	
+	var myPerson = new Person(full_name, age, gender);
+
+	with(myPerson)
+	{
+     document.write(full_name + "<br>");
+     document.write(age + "<br>");
+     document.write(gender + "<br>");
+     document.write(life_expect()+ "<br>");
+	}
+	lb();
+	document.write("Hi "+myPerson.full_name+", as a "+myPerson.age+" year old "+myPerson.gender+" you are expected to live "+myPerson.life_expect()+" more years!");
+	</script>
+</body>
+</html>

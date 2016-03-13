@@ -1,0 +1,110 @@
+<!DOCTYPE>
+<html> 
+<head>
+	<title>Chapter 7 Assignment</title>
+	<script type="text/javascript">
+	
+	function stars()
+	{
+		for(var s=1; s<=50; s++)
+		{
+			document.write("*");
+		}
+		document.write("</br>");
+	}
+
+	var books = ["War and Peace", "Huckleberry Finn", "The Return of the Native", "A Christmas Carol", "Exodus"];
+	
+	var authors = [];
+	
+	for(var i=0; i<books.length; i++)
+	{
+		authors[i] = prompt("Enter the last name of the author that wrote "+books[i]+":","");
+	}
+	
+	stars();
+	
+	for(var n=0; n<books.length; n++)
+	{
+    	document.write("<b>Book: </b>"+books[n]+"<b> Author: </b>"+authors[n]+"</br>");
+    }
+ 	
+ 	stars();
+ 	
+ 	var author_title = 
+ 	[	["Tolstoy", "War and Peace"],
+ 		["Twain", "Huckleberry Finn"],
+ 		["Hardy", "The Return of the Native"],
+ 		["Dickens", "A Christmas Carol"],
+ 		["Uris", "Exodus"]
+ 	];
+
+ 	for(var i=0; i<author_title.length; i++)
+ 	{
+ 		for(var j=0; j<author_title[i].length; j++)
+ 		{
+ 			if (j===0)
+ 			{
+ 			document.write(author_title[i][j] + " wrote ");
+ 			}
+ 			else if (j===author_title[i].length -1)
+ 			{
+ 				document.write(author_title[i][j]+"<br>");
+ 			}
+ 			else
+ 			{
+ 				continue;
+ 			}
+ 		}
+ 	}
+
+ 	stars();
+ 	
+ 	author_title.pop();
+ 	for(var i=0; i<author_title.length; i++)
+ 	{
+ 		for(var j=0; j<author_title[i].length; j++)
+ 		{
+ 			if (j===0)
+ 			{
+ 			document.write(author_title[i][j] + " wrote ");
+ 			}
+ 			else if (j===author_title[i].length -1)
+ 			{
+ 				document.write(author_title[i][j]+"<br>");
+ 			}
+ 			else
+ 			{
+ 				continue;
+ 			}
+ 		}
+ 	}
+ 	
+ 	stars();
+
+ 	author_title.sort();
+ 	for(var i=0; i<author_title.length; i++)
+ 	{
+ 		for(var j=0; j<author_title[i].length; j++)
+ 		{
+ 			if (j===0)
+ 			{
+ 			document.write(author_title[i][j] + " wrote ");
+ 			}
+ 			else if (j===author_title[i].length -1)
+ 			{
+ 				document.write(author_title[i][j]+"<br>");
+ 			}
+ 			else
+ 			{
+ 				continue;
+ 			}
+ 		}
+ 	}
+
+ 	stars();
+	
+	</script>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>Chapter 10 Assignment</title>
+	
+	<script type="text/javascript">
+		function green() 
+		{
+		document.body.style.background = "green"; 
+		}
+
+		function nogreen() 
+		{
+		document.body.style.background = "white"; 
+		}
+
+
+	</script>
+</head>
+<body>
+	<h1>Event Handlers At Work!</h1>
+	<h2>By Natasha</h2>
+	<ol type="a">
+		<li><a id = "changeToGreen" href="http://www.Google.com">Search Here</a></li><br>
+		
+		<li><form method="post">
+		<input style="background-color:lightgray" type="Button" name="" value="Click Me" onclick="alert('You clicked the button')"</form></li><br>
+		
+		<li><form action="" method="post">My name is <input type="text" name="name" value="Sam" onchange="nameChange(this.value)"> Go ahead, change my name.</li><br>
+		
+		<li><button style="background-color:lightgray" onclick="reloadPage()">Reload</button></li><br>
+		
+		<li><button style="background-color:lightgray" onclick="favPage()">My Favorite Site</button></li>
+
+	</ol>
+
+	
+
+	<script>
+		var greenLabel = document.getElementById("changeToGreen");
+		greenLabel.onmouseover= green;
+		greenLabel.onmouseout= nogreen;
+
+		function nameChange(newName)
+		{
+			alert("Name was changed to: "+newName);
+		}
+
+		function reloadPage()
+		{
+			location.reload();
+		}
+
+		function favPage()
+		{
+			window.open("http://www.procatinator.com");
+		}
+	</script>
+
+</body>
+</html>

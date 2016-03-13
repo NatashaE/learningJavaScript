@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 6 Assignment 2</title>
+	
+	<script type="text/javascript">
+		function monthly_pymt(monthly_int_rate, num_months, loan_amount)
+		{
+			var base = Math.pow(1 + monthly_int_rate, num_months);
+			var payment = (loan_amount * monthly_int_rate / (1-(1/base))).toFixed(2);
+			
+			return payment;
+		}
+		function lb()
+		{
+			document.write("<br>");
+		}
+	
+		var vehicle_price = Number(prompt("Please enter the vehicle price")).toFixed(2);;
+		
+		var down_payment = Number(prompt("Please enter the down payment amount")).toFixed(2);;
+		
+		var annual_int_rate = Number(prompt("Please enter the annual interest rate for the loan"));
+	</script>
+</head>
+<body style="background-color: tan">
+	
+	<script type="text/javascript">
+		
+		var num_months;
+		var loan_amount = (vehicle_price - down_payment).toFixed(2);
+		var monthly_int_rate = annual_int_rate / 1200;
+		document.write("<h1>Loan Calculator</h1>");
+		lb();
+		document.write("Vehicle price: $" +vehicle_price);
+		lb();
+		document.write("Down payment: $" +down_payment);
+		lb();
+		document.write("Interest Rate: " +annual_int_rate+ "%");
+		lb();
+		document.write("Loan Amount: $" +loan_amount);
+		lb();
+		document.write("<pre># of Months	Payment/month</pre>")
+		
+		for(var year= 2; year < 6; year ++)
+		{
+			num_months = year * 12;
+			
+			document.write("<pre>  "+num_months+"		  "+ monthly_pymt(monthly_int_rate, num_months, loan_amount)+"</pre>");
+			
+		}
+	</script>
+</body>
+</html>
