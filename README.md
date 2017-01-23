@@ -1,0 +1,2 @@
+# learningJavaScript
+javaScript assignments
